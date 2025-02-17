@@ -2,17 +2,9 @@ def gv
 
 pipeline {
     agent any
-    stage("Install Dependencies") {
-            steps {
-                script {
-                    // Installing dependencies using the install_dep.sh script
-                    gv.installDependencies()  // Custom method to handle install
-                }
-            }
-    }
-    tools {
-        python 'Python-3.11'  // from the tools configuration
-    }
+    // tools {
+    //     python 'Python-3.11'  // from the tools configuration
+    // }
     stages {
         stage("Init") {
             steps {
@@ -29,7 +21,14 @@ pipeline {
             }
         }
 
-        
+        stage("Install Dependencies") {
+            steps {
+                script {
+                    // Installing dependencies using the install_dep.sh script
+                    gv.installDependencies()  // Custom method to handle install
+                }
+            }
+        }
 
         stage('Run Unit Tests') {
             steps {
