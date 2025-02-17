@@ -71,7 +71,7 @@ variable subnet2_cidr_block {
   type        = string
 }
 
-variable "cluster_name" {
-  description = "eks cluster name"
-  type        = string
-}
+# variable "cluster_name" {
+#   description = "eks cluster name"
+#   type        = string
+# }
