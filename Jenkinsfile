@@ -117,7 +117,7 @@ pipeline {
         //             gv.applyTerraform()
         //         }
         //     }
-        }
+        // }
 
         stage("Terraform Destroy (Optional)") {
             // when {
