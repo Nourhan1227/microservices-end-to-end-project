@@ -39,9 +39,9 @@ def planTerraform() {
 //     sh 'terraform apply -auto-approve tfplan'
 // }
 
-def destroyTerraform() {
-    echo "Destroying Terraform infrastructure..."
-    sh 'terraform destroy -auto-approve'
-}
+// def destroyTerraform() {
+//     echo "Destroying Terraform infrastructure..."
+//     sh 'terraform destroy -auto-approve'
+// }
 
 return this
