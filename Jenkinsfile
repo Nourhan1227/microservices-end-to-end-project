@@ -111,18 +111,18 @@ pipeline {
             }
         }
 
-        stage("Terraform Apply") {
-            steps {
-                script {
-                    gv.applyTerraform()
-                }
-            }
+        // stage("Terraform Apply") {
+        //     steps {
+        //         script {
+        //             gv.applyTerraform()
+        //         }
+        //     }
         }
 
         stage("Terraform Destroy (Optional)") {
-            when {
-                expression { return params.DESTROY_INFRA }  // Add a checkbox parameter in Jenkins UI
-            }
+            // when {
+            //     expression { return params.DESTROY_INFRA }  // Add a checkbox parameter in Jenkins UI
+            // }
             steps {
                 script {
                     gv.destroyTerraform()

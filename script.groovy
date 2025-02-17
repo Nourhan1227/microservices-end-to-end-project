@@ -34,10 +34,10 @@ def planTerraform() {
     sh 'terraform plan -out=tfplan'
 }
 
-def applyTerraform() {
-    echo "Applying Terraform..."
-    sh 'terraform apply -auto-approve tfplan'
-}
+// def applyTerraform() {
+//     echo "Applying Terraform..."
+//     sh 'terraform apply -auto-approve tfplan'
+// }
 
 def destroyTerraform() {
     echo "Destroying Terraform infrastructure..."
