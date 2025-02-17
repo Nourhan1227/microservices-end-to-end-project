@@ -15,11 +15,11 @@ def buildImage() {
     }
 
 }
-def deployApp(){
-     steps{
-        echo 'deploying the application...'
-     }
-}
+// def deployApp(){
+//      steps{
+//         echo 'deploying the application...'
+//      }
+// }
 
 return this
 // ###################################################################3

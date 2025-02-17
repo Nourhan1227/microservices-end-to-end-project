@@ -48,14 +48,14 @@ pipeline {
             }
         }
 
-        stage("Deploy to Server") {
-            steps {
-                script {
-                    gv.deployApp()
+        // stage("Deploy to Server") {
+        //     steps {
+        //         script {
+        //             gv.deployApp()
                     
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
     }
 
     // post {
