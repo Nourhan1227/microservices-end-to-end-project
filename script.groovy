@@ -1,9 +1,9 @@
 // Install Dependencies (via the install_dep.sh script)
-def installDependencies() {
-    echo "Installing dependencies..."
-    sh 'chmod +x install_dep.sh'  // Ensure the script is executable
-    sh './install_dep.sh'  // Run the installation script
-}
+// def installDependencies() {
+//     echo "Installing dependencies..."
+//     sh 'chmod +x install_dep.sh'  // Ensure the script is executable
+//     sh './install_dep.sh'  // Run the installation script
+// }
 
 // Build Docker Image and Push to Docker Hub
 def buildImage() {

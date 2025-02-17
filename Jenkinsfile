@@ -14,21 +14,21 @@ pipeline {
             }
         }
 
-        stage('Checkout Code') {
-            steps {
-                // Checkout code from your repo
-                git branch: 'main', url: 'https://github.com/Nourhan1227/microservices-end-to-end-project.git'
-            }
-        }
+        // stage('Checkout Code') {
+        //     steps {
+        //         // Checkout code from your repo
+        //         git branch: 'main', url: 'https://github.com/Nourhan1227/microservices-end-to-end-project.git'
+        //     }
+        // }
 
-        stage("Install Dependencies") {
-            steps {
-                script {
-                    // Installing dependencies using the install_dep.sh script
-                    gv.installDependencies()  // Custom method to handle install
-                }
-            }
-        }
+        // stage("Install Dependencies") {
+        //     steps {
+        //         script {
+        //             // Installing dependencies using the install_dep.sh script
+        //             gv.installDependencies()  // Custom method to handle install
+        //         }
+        //     }
+        // }
 
         stage('Run Unit Tests') {
             steps {
@@ -58,18 +58,18 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            script {
-                slackSend(channel: '#your-slack-channel', message: "Build succeeded: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
-            }
-        }
-        failure {
-            script {
-                slackSend(channel: '#your-slack-channel', message: "Build failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
-            }
-        }
-    }
+    // post {
+    //     success {
+    //         script {
+    //             slackSend(channel: '#your-slack-channel', message: "Build succeeded: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
+    //         }
+    //     }
+    //     failure {
+    //         script {
+    //             slackSend(channel: '#your-slack-channel', message: "Build failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
+    //         }
+    //     }
+    // }
 }
 
 // pipeline {
