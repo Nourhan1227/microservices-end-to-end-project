@@ -51,7 +51,7 @@ pipeline {
         stage("Deploy to Server") {
             steps {
                 script {
-                    gv.eployApp()
+                    gv.deployApp()
                     
                 }
             }
