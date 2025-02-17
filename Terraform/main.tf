@@ -1,7 +1,7 @@
 provider "aws" {
   region=var.region # "us-east-1"
   # access_key=env.aws-access-key
-  # secret_key=enaws-secret-key  
+  # secret_key=env.aws-secret-key  
 }
 
 resource "aws_vpc" "my-vpc" {
@@ -228,3 +228,5 @@ resource "aws_security_group" "eks-sec-grp" {
 #   token                  = data.aws_eks_cluster_auth.my-eks-cluster.token
 #   cluster_ca_certificate = base64decode(data.aws_eks_cluster.my-eks-cluster.certificate_authority[0].data)
 # }
+
+
