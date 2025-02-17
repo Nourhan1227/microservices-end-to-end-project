@@ -13,11 +13,12 @@ def buildImage() {
         sh "echo $PASS | docker login -u $USER --password-stdin"  
         sh 'docker push nourhan01289/pythonapp:latest'  
     }
- def deployApp(){
+
+}
+def deployApp(){
      steps{
         echo 'deploying the application...'
      }
- }
 }
 
 return this
